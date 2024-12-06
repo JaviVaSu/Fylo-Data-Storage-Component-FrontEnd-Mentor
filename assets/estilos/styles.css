@@ -1,0 +1,242 @@
+:root{
+    --Gradient: #ffa399 to #ff4d97;
+    --Pale-Blue: rgb(221, 219, 255);
+    --Grayish-Blue: rgb(132, 135, 148);
+    --Dark-Blue: rgb(29, 44, 103);
+    --Very-Dark-Blue: rgb(12, 18, 44);
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.first{
+    width: 100%;
+    background-color: var(--Dark-Blue);
+    border-radius: 2rem 10rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.first .logo{
+    width: 70%;
+    padding: 3rem 3rem 3rem 4rem;
+}
+.first .logo img{
+    width: 100%;
+}
+.first .icons{
+    width: 85%;
+    padding: 0 3rem 3rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 2rem;
+}
+.first .icons div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-Dark-Blue);
+    aspect-ratio: 1/1;
+    border-radius: 1.5rem;
+}
+.first .icons img{
+    width: 50%;
+    cursor: pointer;
+}
+.last{
+    width: 100%;
+    position: relative;
+    background-color: var(--Dark-Blue);
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.last h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--Pale-Blue);
+}
+.last strong{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: var(--Pale-Blue);
+}
+.last .slidecontainer{
+    width: 85%;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    background: var(--Very-Dark-Blue);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 2rem;
+    background: linear-gradient(to right, #ffa399 81.5%, #ff4d97 18.5%);
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background: white;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    cursor: pointer;
+}
+.last .numscontainer{
+    width: 85%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.last .numscontainer p{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--Pale-Blue);
+}
+.float{
+    position: absolute;
+    background-color: white;
+    width: 70%;
+    border-radius: 1.5rem;
+    text-align: center;
+    bottom: -25%;
+}
+.float p{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--Grayish-Blue);
+}
+.float span{
+    font-size: 4rem;
+    color: var(--Very-Dark-Blue);
+}
+.triangle{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    main{
+        width: 60%;
+    }
+    .first .logo{
+        padding: 5rem;
+    }
+    .first .icons{
+        width: 70%;
+    }
+    .first .icons img{
+        width: 60%;
+    }
+    .last h3{
+        font-size: 2.2rem;
+    }
+    .last .slidecontainer, .last .numscontainer{
+        width: 95%;
+    }
+    .last .numscontainer p{
+        font-size: 2rem;
+    }
+    .float{
+        width: 50%;
+    }
+    .float p{
+        font-size: 2rem;
+    }
+    .float span{
+        font-size: 4.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body{
+        background-color: var(--Very-Dark-Blue);
+        background-image: url(../images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position-y: bottom;
+    }
+    main{
+        width: 85%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        column-gap: 3rem;
+        align-items: end;
+    }
+}
+
+@media (min-width: 1280px) {
+    main{
+        width: 65%;
+    }
+    .first .logo{
+        width: 65%;
+        padding: 5rem 0 3rem 5rem;
+    }
+    .first .icons{
+        padding: 0 0 3rem 5rem;
+    }
+    .first .icons img{
+        width: 45%;
+    }
+    .last h3{
+        align-self: flex-start;
+        padding: 0 0 0 2rem;
+        font-size: 2rem;
+    }
+    .last .numscontainer{
+        margin-bottom: 0;
+    }
+    .float{
+        width: 40%;
+        right: 5%;
+        top: -30%;
+        bottom: auto;
+    }
+}
+@media (min-width: 1728px) {
+    main{
+        width: 60%;
+    }
+}

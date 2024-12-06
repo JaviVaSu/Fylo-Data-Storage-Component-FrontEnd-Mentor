@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/estilos/normalize.css">
+  <link rel="stylesheet" href="./assets/estilos/styles.css">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+</head>
+<body>
+  <main>
+
+    <section class="first">
+      <div class="logo">
+        <img src="./assets/images/logo.svg">
+      </div>
+      <div class="icons">
+        <div>
+          <img src="./assets/images/icon-document.svg">
+        </div>
+        <div>
+          <img src="./assets/images/icon-folder.svg">
+        </div>
+        <div>
+          <img src="./assets/images/icon-upload.svg">
+        </div>
+      </div>
+    </section>
+
+    <section class="last">
+      <h3>You’ve used<strong> 815 GB</strong> of your storage</h3>
+      <div class="slidecontainer">
+        <input type="range" min="0" max="1000" value="815" class="slider" id="myRange" disabled="true">
+      </div>
+      <div class="numscontainer">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+      <div class="float">
+        <p><span>185</span> GB Left</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
